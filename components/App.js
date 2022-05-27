@@ -1,5 +1,4 @@
-import { React, useState } from "react";
-import { data } from "../SpeakerData";
+import { useState } from "react";
 import CardList from "./CardList";
 import NavBar from "./navBar";
 import SpeakersToolbar from "./SpeakersToolBar";
@@ -7,6 +6,7 @@ import SpeakersToolbar from "./SpeakersToolBar";
 export default function App() {
   const [theme, setTheme] = useState("light");
   const [showSessions, setShowSessions] = useState(true);
+
   return (
     <div
       className={
@@ -21,7 +21,7 @@ export default function App() {
           showSessions={showSessions}
           setShowSessions={setShowSessions}
         />
-        <CardList data={data} showSessions={showSessions} theme={theme} />
+        <CardList showSessions={showSessions} theme={theme} />
       </div>
     </div>
   );
