@@ -14,7 +14,8 @@ export default function NavBar({ theme }) {
           <div className={theme === "light" ? "" : "text-info"}>
             <span>Hello Mr. Smith</span>
             <span>
-              <a href="#">{"\t"}sign-out</a>
+              {"\t"}
+              <a href="#">sign-out</a>
             </span>
           </div>
         </div>
