@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { data } from "../SpeakerData";
 import Card from "../sharedcom/Card";
-import ReactPlaceholder from "react-placeholder";
 
 export default function CardList({ showSessions, theme }) {
   const [speakerData, setSpeakerData] = useState([]);
@@ -13,7 +12,6 @@ export default function CardList({ showSessions, theme }) {
     try {
       setSpeakerData(data);
       setIsLoading(false);
-      throw "none";
     } catch (e) {
       setIsError(true);
       setIsLoading(false);
@@ -21,9 +19,6 @@ export default function CardList({ showSessions, theme }) {
     }
   });
 
-  if (isLoading === true) {
-    return <>Loooading</>;
-  }
   if (isError === true) {
     return <>there Is an Error : {PageErorr}</>;
   }
@@ -36,6 +31,7 @@ export default function CardList({ showSessions, theme }) {
             data={speaker}
             showSessions={showSessions}
             theme={theme}
+            isLoading={isLoading}
           />
         ))}
       </div>
