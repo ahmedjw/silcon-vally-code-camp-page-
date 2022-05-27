@@ -1,11 +1,7 @@
-import Warber from "../components/Warber";
+import App from "../components/App";
 
 const IndexPage = () => {
-  return (
-    <div className="container ">
-      <Warber />
-    </div>
-  );
+  return <App />;
 };
 
 export default IndexPage;

@@ -11,11 +11,10 @@ export default function NavBar({ theme }) {
           <div className={theme === "light" ? "" : "text-info"}>
             <h4 className="header-title">Silicon Valley Code Camp</h4>
           </div>
-
           <div className={theme === "light" ? "" : "text-info"}>
             <span>Hello Mr. Smith</span>
             <span>
-              <a href="#">sign-out</a>
+              <a href="#">{"\t"}sign-out</a>
             </span>
           </div>
         </div>
