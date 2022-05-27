@@ -1,7 +1,7 @@
 import React from "react";
 
 function Cardbody({ Data }) {
-  const { id, first, last, bio, company, twitterHandle } = Data;
+  const { id, first, last, bio } = Data;
   return (
     <div>
       <div className=" d-flex justify-content-center align-content-center ">
