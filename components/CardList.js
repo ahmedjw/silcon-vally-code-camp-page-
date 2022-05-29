@@ -1,7 +1,10 @@
+import { React, useContext } from "react";
 import useGetSpeakerRequests from "../hooks/useGetSpeakerRequests";
 import Card from "../sharedcom/Card";
+import { mainContext } from "../layout/Layout";
 
-export default function CardList({ showSessions, theme }) {
+export default function CardList() {
+  const { showSessions, theme } = useContext(mainContext);
   const { speakerData, isLoading, isError, PageErorr } =
     useGetSpeakerRequests();
 

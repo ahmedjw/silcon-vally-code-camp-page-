@@ -1,6 +1,8 @@
-import React from "react";
+import { React, useContext } from "react";
+import { mainContext } from "../layout/Layout";
 
-export default function NavBar({ theme }) {
+export default function NavBar() {
+  const { theme } = useContext(mainContext);
   return (
     <div className="padT4 padB4">
       <div className="container mobile-container">
