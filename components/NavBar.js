@@ -1,5 +1,5 @@
 import { React, useContext } from "react";
-import { mainContext } from "../layout/Layout";
+import { mainContext } from "../context/ThemeProvider";
 
 export default function NavBar() {
   const { theme } = useContext(mainContext);

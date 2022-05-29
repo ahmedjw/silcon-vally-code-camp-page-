@@ -1,25 +1,22 @@
-import { createContext, useState } from "react";
+import { useContext } from "react";
+import { mainContext, ThemeProvider } from "../context/ThemeProvider";
 
-export const mainContext = createContext();
-export function Layout({ themeColour, children }) {
-  const [theme, setTheme] = useState(themeColour);
-  const [showSessions, setShowSessions] = useState(true);
+export default function Layout({ themeColour, children }) {
   return (
-    <div>
-      {" "}
-      <mainContext.Provider
-        value={{ theme, setTheme, showSessions, setShowSessions }}
-      >
-        <div
-          className={
-            theme === "light"
-              ? "container-fluid light "
-              : "container-fluid dark "
-          }
-        >
-          {children}
-        </div>
-      </mainContext.Provider>
+    <ThemeProvider themeColour={themeColour}>
+      <LayoutNoProvider>{children}</LayoutNoProvider>
+    </ThemeProvider>
+  );
+}
+function LayoutNoProvider({ children }) {
+  const { theme } = useContext(mainContext);
+  return (
+    <div
+      className={
+        theme === "light" ? "container-fluid light " : "container-fluid dark "
+      }
+    >
+      {children}
     </div>
   );
 }

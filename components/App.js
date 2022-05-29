@@ -1,4 +1,4 @@
-import { Layout } from "../layout/Layout";
+import Layout from "../layout/Layout";
 import CardList from "./CardList";
 import NavBar from "./navBar";
 import SpeakersToolbar from "./SpeakersToolBar";
