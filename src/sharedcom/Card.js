@@ -6,7 +6,9 @@ import { SpeakerContext } from "../context/SpeakerProvider";
 import { mainContext } from "../context/ThemeProvider";
 
 export default function Card({ data, isLoading }) {
-  const { showSessions } = useContext(SpeakerContext);
+  const { sessions } = data;
+
+  const { showSessions, eventYear } = useContext(SpeakerContext);
   const { theme } = useContext(mainContext);
   return (
     <ReactPlaceholder type="media" rows={6} ready={isLoading === false}>
@@ -16,7 +18,13 @@ export default function Card({ data, isLoading }) {
         }
       >
         <Cardbody Data={data} />
-        {showSessions === true ? <Session Data={data} /> : ""}
+        <div className="card-body ">
+          {showSessions === true
+            ? sessions
+                .filter((session) => session.eventYear == eventYear)
+                .map((session) => <Session session={session} />)
+            : ""}
+        </div>
       </div>
     </ReactPlaceholder>
   );

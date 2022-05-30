@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Session({ Data }) {
-  const { sessions } = Data;
+export default function Session({ session }) {
   return (
-    <div className="card-body ">
-      <span className="card-text">{sessions[0].title}</span>
-      <strong className="card-text">{sessions[0].room.name}</strong>
+    <div>
+      <span className="card-text">{session.title}</span>
+      {"\t"}
+      <strong className="card-text">{session.room.name}</strong>
     </div>
   );
 }

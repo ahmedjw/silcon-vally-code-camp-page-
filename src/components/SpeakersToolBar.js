@@ -1,4 +1,5 @@
 import { React, useContext } from "react";
+import { useEffect } from "react";
 import { SpeakerContext } from "../context/SpeakerProvider";
 import { mainContext } from "../context/ThemeProvider";
 
@@ -13,14 +14,6 @@ function SpeakersToolbar() {
     setSearchQuery,
   } = useContext(SpeakerContext);
 
-  console.log("WTF", {
-    showSessions,
-    setShowSessions,
-    EVENT_YEARS,
-    setEventYear,
-    eventYear,
-    setSearchQuery,
-  });
   return (
     <section className="toolbar dark-theme-header">
       <div className="container">
