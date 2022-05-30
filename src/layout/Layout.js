@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import SpeakerProvider from "../context/SpeakerProvider";
 import { mainContext, ThemeProvider } from "../context/ThemeProvider";
 
 export default function Layout({ themeColour, children }) {

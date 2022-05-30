@@ -1,14 +1,13 @@
 import Layout from "../layout/Layout";
-import CardList from "./CardList";
 import NavBar from "./navBar";
-import SpeakersToolbar from "./SpeakersToolBar";
+import { SpeakerProvider } from "../context/SpeakerProvider";
+import Speakers from "./Speakers";
 
 export default function App() {
   return (
     <Layout themeColour="light">
       <NavBar />
-      <SpeakersToolbar />
-      <CardList />
+      <Speakers />
     </Layout>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { data } from "../SpeakerData";
+import { data } from "../../SpeakerData";
 
 const useGetSpeakerRequests = () => {
   const [speakerData, setSpeakerData] = useState([]);
