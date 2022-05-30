@@ -14,7 +14,7 @@ export default function NavBar() {
             <h4 className="header-title">Silicon Valley Code Camp</h4>
           </div>
           <div className={theme === "light" ? "" : "text-info"}>
-            <span>Hello Mr. Smith</span>
+            <span>Hello Mr. Ahmed </span>
             <span>
               {"\t"}
               <a href="#">sign-out</a>
