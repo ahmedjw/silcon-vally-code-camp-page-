@@ -1,5 +1,5 @@
 {
-  "name": "designing-react-components-pluralsight-course",
+  "name": "Silcon-vally=code-camp-page",
   "version": "1.0.0",
   "description": "example code",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "babel-preset-es2015": "^6.24.1",
     "bootstrap": "^5.0.1",
     "next": "^10.2.0",
